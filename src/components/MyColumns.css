@@ -1,0 +1,18 @@
+.column-container {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 30px;
+    margin: 10px 50px;
+    background-color: #a5b1c2;
+    border: solid black 5px;
+}
+
+.column {
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    margin-right: 1px;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    border: solid black 1px;
+}

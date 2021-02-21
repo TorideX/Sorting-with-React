@@ -1,4 +1,4 @@
-<h1><a href="https://sorting-with-react.netlify.app/">Preview Project</a></h1>
+<h1><a href="https://sorting-with-react.netlify.app/">Click here to Preview project</a></h1>
 
 ## Available Scripts
 

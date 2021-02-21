@@ -5,6 +5,7 @@
     margin: 10px 50px;
     background-color: #a5b1c2;
     border: solid black 5px;
+    justify-content: center;
 }
 
 .column {

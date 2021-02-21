@@ -1,21 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './MyColumns.css'
 
 export const MyColumns = ({myArray, swap1, swap2, sortedCols}) => {
-    const width = 2000;
-    const [colWidth, setColWidth] = useState(0)
     const swap1Color = '#706fd3'
     const swap2Color = '#227093'
     useEffect(()=> {
-        let temp = width/myArray.length;
-        setColWidth(temp)
     }, [myArray])
     return (
         <div className='column-container'>
             {
                 myArray.map((num,i) => (
 
-                    <div className='column' key={i} style={{height:num*5, width:colWidth, 
+                    <div className='column' key={i} style={{height:num*5, width:60, 
                         backgroundColor: 
                         swap1===i ? swap1Color : 
                         swap2 === i ? swap2Color: 

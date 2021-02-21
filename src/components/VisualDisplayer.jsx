@@ -18,25 +18,25 @@ export const VisualDisplayer = () => {
     const [sortBtnDisabled, setSortBtnDisabled] = useState(false);
     const [swap1, setSwap1] = useState(-1)
     const [swap2, setSwap2] = useState(-1)
-
+    
     useEffect(() => {
+        const fillArray = () => {
+            let newArray = []
+            let random;
+            for(let i = 0; i < size; i++)
+            {
+                random = Math.floor(Math.random() * 100 + 1)
+                newArray.push(random);
+            }
+            setMyArray(newArray)
+            setSortedCols([])
+            setSortBtnDisabled(false);
+        }        
         fillArray()
         setSwap1(-1)
         setSwap2(-1)
     }, [size])
-
-    const fillArray = () => {
-        let newArray = []
-        let random;
-        for(let i = 0; i < size; i++)
-        {
-            random = Math.floor(Math.random() * 100 + 1)
-            newArray.push(random);
-        }
-        setMyArray(newArray)
-        setSortedCols([])
-        setSortBtnDisabled(false);
-    }
+    
 
     const sleep = (ms) => {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -143,6 +143,7 @@ export const VisualDisplayer = () => {
             case 'bubbleSort': bubbleSorting(); break;
             case 'insertionSort': insertionSorting(); break;
             case 'quickSort': quickSorting(); break;
+            default: break;
         }        
     }
 
